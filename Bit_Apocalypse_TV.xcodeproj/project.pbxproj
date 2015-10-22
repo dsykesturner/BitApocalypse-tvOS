@@ -9,10 +9,18 @@
 /* Begin PBXBuildFile section */
 		6565C21A1BAC26E500E74749 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C2191BAC26E500E74749 /* main.m */; };
 		6565C21D1BAC26E500E74749 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C21C1BAC26E500E74749 /* AppDelegate.m */; };
-		6565C2201BAC26E500E74749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C21F1BAC26E500E74749 /* ViewController.m */; };
 		6565C2231BAC26E500E74749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6565C2211BAC26E500E74749 /* Main.storyboard */; };
 		6565C2251BAC26E500E74749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6565C2241BAC26E500E74749 /* Assets.xcassets */; };
 		6565C2301BAC26E500E74749 /* Bit_Apocalypse_TVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C22F1BAC26E500E74749 /* Bit_Apocalypse_TVTests.m */; };
+		6565C23D1BAC272B00E74749 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C23C1BAC272B00E74749 /* ViewController.m */; };
+		6565C2401BAC273B00E74749 /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C23F1BAC273B00E74749 /* TransitionManager.m */; };
+		6565C2461BAC278800E74749 /* GameObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C2431BAC278800E74749 /* GameObjectView.m */; };
+		6565C2471BAC278800E74749 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C2451BAC278800E74749 /* PersonView.m */; };
+		6565C24C1BAC279900E74749 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C2491BAC279900E74749 /* GameViewController.m */; };
+		6565C24D1BAC279900E74749 /* StoryIntoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6565C24B1BAC279900E74749 /* StoryIntoViewController.m */; };
+		6565C24F1BAC27D800E74749 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6565C24E1BAC27D800E74749 /* AVFoundation.framework */; };
+		6565C2531BAC290800E74749 /* Operation_Catch_the_Bad_Guy_8_Bit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6565C2511BAC290800E74749 /* Operation_Catch_the_Bad_Guy_8_Bit.mp3 */; };
+		6565C2541BAC290800E74749 /* Pixelated_Cosmos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6565C2521BAC290800E74749 /* Pixelated_Cosmos.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +38,27 @@
 		6565C2191BAC26E500E74749 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6565C21B1BAC26E500E74749 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6565C21C1BAC26E500E74749 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6565C21E1BAC26E500E74749 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6565C21F1BAC26E500E74749 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6565C2221BAC26E500E74749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6565C2241BAC26E500E74749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6565C2261BAC26E500E74749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6565C22B1BAC26E500E74749 /* Bit_Apocalypse_TVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bit_Apocalypse_TVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6565C22F1BAC26E500E74749 /* Bit_Apocalypse_TVTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bit_Apocalypse_TVTests.m; sourceTree = "<group>"; };
 		6565C2311BAC26E500E74749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6565C23B1BAC272B00E74749 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ViewControllers/ViewController.h; sourceTree = "<group>"; };
+		6565C23C1BAC272B00E74749 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ViewControllers/ViewController.m; sourceTree = "<group>"; };
+		6565C23E1BAC273B00E74749 /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
+		6565C23F1BAC273B00E74749 /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
+		6565C2421BAC278800E74749 /* GameObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameObjectView.h; path = Objects/GameObjectView.h; sourceTree = "<group>"; };
+		6565C2431BAC278800E74749 /* GameObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameObjectView.m; path = Objects/GameObjectView.m; sourceTree = "<group>"; };
+		6565C2441BAC278800E74749 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonView.h; path = Objects/PersonView.h; sourceTree = "<group>"; };
+		6565C2451BAC278800E74749 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonView.m; path = Objects/PersonView.m; sourceTree = "<group>"; };
+		6565C2481BAC279900E74749 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = ViewControllers/GameViewController.h; sourceTree = "<group>"; };
+		6565C2491BAC279900E74749 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = ViewControllers/GameViewController.m; sourceTree = "<group>"; };
+		6565C24A1BAC279900E74749 /* StoryIntoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryIntoViewController.h; path = ViewControllers/StoryIntoViewController.h; sourceTree = "<group>"; };
+		6565C24B1BAC279900E74749 /* StoryIntoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryIntoViewController.m; path = ViewControllers/StoryIntoViewController.m; sourceTree = "<group>"; };
+		6565C24E1BAC27D800E74749 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6565C2511BAC290800E74749 /* Operation_Catch_the_Bad_Guy_8_Bit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Operation_Catch_the_Bad_Guy_8_Bit.mp3; path = ../Operation_Catch_the_Bad_Guy_8_Bit.mp3; sourceTree = "<group>"; };
+		6565C2521BAC290800E74749 /* Pixelated_Cosmos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pixelated_Cosmos.mp3; path = ../Pixelated_Cosmos.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6565C24F1BAC27D800E74749 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,8 +103,12 @@
 			children = (
 				6565C21B1BAC26E500E74749 /* AppDelegate.h */,
 				6565C21C1BAC26E500E74749 /* AppDelegate.m */,
-				6565C21E1BAC26E500E74749 /* ViewController.h */,
-				6565C21F1BAC26E500E74749 /* ViewController.m */,
+				6565C23E1BAC273B00E74749 /* TransitionManager.h */,
+				6565C23F1BAC273B00E74749 /* TransitionManager.m */,
+				6565C23A1BAC26F700E74749 /* ViewControllers */,
+				6565C2411BAC278100E74749 /* Objects */,
+				6565C2551BAC290E00E74749 /* Songs */,
+				6565C2501BAC27E300E74749 /* Frameworks */,
 				6565C2211BAC26E500E74749 /* Main.storyboard */,
 				6565C2241BAC26E500E74749 /* Assets.xcassets */,
 				6565C2261BAC26E500E74749 /* Info.plist */,
@@ -106,6 +132,47 @@
 				6565C2311BAC26E500E74749 /* Info.plist */,
 			);
 			path = Bit_Apocalypse_TVTests;
+			sourceTree = "<group>";
+		};
+		6565C23A1BAC26F700E74749 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6565C23B1BAC272B00E74749 /* ViewController.h */,
+				6565C23C1BAC272B00E74749 /* ViewController.m */,
+				6565C2481BAC279900E74749 /* GameViewController.h */,
+				6565C2491BAC279900E74749 /* GameViewController.m */,
+				6565C24A1BAC279900E74749 /* StoryIntoViewController.h */,
+				6565C24B1BAC279900E74749 /* StoryIntoViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6565C2411BAC278100E74749 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				6565C2421BAC278800E74749 /* GameObjectView.h */,
+				6565C2431BAC278800E74749 /* GameObjectView.m */,
+				6565C2441BAC278800E74749 /* PersonView.h */,
+				6565C2451BAC278800E74749 /* PersonView.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		6565C2501BAC27E300E74749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6565C24E1BAC27D800E74749 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6565C2551BAC290E00E74749 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				6565C2511BAC290800E74749 /* Operation_Catch_the_Bad_Guy_8_Bit.mp3 */,
+				6565C2521BAC290800E74749 /* Pixelated_Cosmos.mp3 */,
+			);
+			name = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +224,7 @@
 				TargetAttributes = {
 					6565C2141BAC26E500E74749 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = BU3JKZ42Q4;
 					};
 					6565C22A1BAC26E500E74749 = {
 						CreatedOnToolsVersion = 7.1;
@@ -188,6 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6565C2531BAC290800E74749 /* Operation_Catch_the_Bad_Guy_8_Bit.mp3 in Resources */,
+				6565C2541BAC290800E74749 /* Pixelated_Cosmos.mp3 in Resources */,
 				6565C2251BAC26E500E74749 /* Assets.xcassets in Resources */,
 				6565C2231BAC26E500E74749 /* Main.storyboard in Resources */,
 			);
@@ -207,8 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6565C2201BAC26E500E74749 /* ViewController.m in Sources */,
+				6565C2461BAC278800E74749 /* GameObjectView.m in Sources */,
+				6565C2401BAC273B00E74749 /* TransitionManager.m in Sources */,
+				6565C24C1BAC279900E74749 /* GameViewController.m in Sources */,
 				6565C21D1BAC26E500E74749 /* AppDelegate.m in Sources */,
+				6565C2471BAC278800E74749 /* PersonView.m in Sources */,
+				6565C23D1BAC272B00E74749 /* ViewController.m in Sources */,
+				6565C24D1BAC279900E74749 /* StoryIntoViewController.m in Sources */,
 				6565C21A1BAC26E500E74749 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bit_Apocalypse_TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.universeapps.Bit-Apocalypse-TV";
@@ -340,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Bit_Apocalypse_TV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.universeapps.Bit-Apocalypse-TV";
@@ -390,6 +467,7 @@
 				6565C2361BAC26E500E74749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6565C2371BAC26E500E74749 /* Build configuration list for PBXNativeTarget "Bit_Apocalypse_TVTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +476,7 @@
 				6565C2391BAC26E500E74749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
