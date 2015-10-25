@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="STH-SB-LJy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -21,12 +22,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APOCALYPSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyh-nc-RsZ">
-                                        <rect key="frame" x="568" y="150" width="784.5" height="150"/>
+                                        <rect key="frame" x="600" y="232" width="720" height="150"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="wnb-T7-Zpt"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="120"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="110"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -69,31 +70,40 @@
                                         <animations/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovu-ac-bSw">
-                                        <rect key="frame" x="892" y="48" width="137" height="86"/>
+                                        <rect key="frame" x="780" y="50" width="360" height="182"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ovu-ac-bSw" secondAttribute="height" multiplier="204:103" id="WRB-Me-G73"/>
+                                            <constraint firstAttribute="width" constant="360" id="wkd-9b-hWJ"/>
+                                        </constraints>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                        <state key="normal" title="BIT"/>
                                         <connections>
                                             <action selector="playStory:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="K8f-lC-xww"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BIT-Title" translatesAutoresizingMaskIntoConstraints="NO" id="yly-hV-Vo0">
+                                        <rect key="frame" x="796" y="58" width="328" height="166"/>
+                                        <animations/>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ovu-ac-bSw" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="0uC-Nc-AfE"/>
-                                    <constraint firstItem="Oyh-nc-RsZ" firstAttribute="top" secondItem="eIJ-pv-79Q" secondAttribute="top" constant="150" id="INc-xl-hXj"/>
-                                    <constraint firstItem="Oyh-nc-RsZ" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="L7i-vJ-9pO"/>
+                                    <constraint firstItem="Ovu-ac-bSw" firstAttribute="top" secondItem="eIJ-pv-79Q" secondAttribute="top" constant="50" id="C5k-qr-VXX"/>
+                                    <constraint firstItem="Oyh-nc-RsZ" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="HGV-fn-YaN"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="leading" secondItem="uoW-Fh-jsG" secondAttribute="leading" constant="10" id="VLT-zB-WYK"/>
                                     <constraint firstItem="uoW-Fh-jsG" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="bsb-vv-KsH"/>
                                     <constraint firstItem="cTN-4J-P3B" firstAttribute="centerY" secondItem="eIJ-pv-79Q" secondAttribute="centerY" id="d8E-zy-oN5"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="top" secondItem="uoW-Fh-jsG" secondAttribute="top" constant="10" id="gYE-K3-dmt"/>
                                     <constraint firstItem="cTN-4J-P3B" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="iCI-MU-FUO"/>
                                     <constraint firstItem="T9k-0n-jqG" firstAttribute="leading" secondItem="eIJ-pv-79Q" secondAttribute="leading" constant="85" id="nYs-na-hoR"/>
-                                    <constraint firstItem="Oyh-nc-RsZ" firstAttribute="top" secondItem="Ovu-ac-bSw" secondAttribute="bottom" constant="16" id="qd1-uf-vDP"/>
+                                    <constraint firstItem="Oyh-nc-RsZ" firstAttribute="top" secondItem="Ovu-ac-bSw" secondAttribute="bottom" id="qd1-uf-vDP"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="trailing" secondItem="uoW-Fh-jsG" secondAttribute="trailing" constant="-10" id="rE7-db-8gd"/>
                                     <constraint firstAttribute="bottom" secondItem="T9k-0n-jqG" secondAttribute="bottom" id="rmH-eD-zA2"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="bottom" secondItem="uoW-Fh-jsG" secondAttribute="bottom" constant="-10" id="tGW-Uq-hDv"/>
+                                    <constraint firstItem="yly-hV-Vo0" firstAttribute="centerX" secondItem="Ovu-ac-bSw" secondAttribute="centerX" id="uhb-8w-27i"/>
+                                    <constraint firstItem="yly-hV-Vo0" firstAttribute="centerY" secondItem="Ovu-ac-bSw" secondAttribute="centerY" id="y2q-ag-bUX"/>
                                     <constraint firstAttribute="bottom" secondItem="uoW-Fh-jsG" secondAttribute="bottom" constant="50" id="ypu-Bk-RaG"/>
                                 </constraints>
                             </view>
@@ -115,6 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="389"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Bbi-IW-AbA">
@@ -128,13 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZd-WS-aOB">
-                                <rect key="frame" x="50" y="50" width="137" height="41"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHI-SU-LWz">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
@@ -165,7 +169,7 @@
                                                         <rect key="frame" x="107" y="10" width="70" height="70"/>
                                                         <animations/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-sJ-uRR">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyD-sJ-uRR">
                                                         <rect key="frame" x="0.0" y="20" width="50" height="50"/>
                                                         <animations/>
                                                         <color key="backgroundColor" red="0.2272400564" green="0.23310782469999999" blue="0.23571029969999999" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -242,6 +246,13 @@
                                     <constraint firstItem="Ty7-Xw-j2i" firstAttribute="centerX" secondItem="vHI-SU-LWz" secondAttribute="centerX" id="OKH-77-6zl"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZd-WS-aOB">
+                                <rect key="frame" x="50" y="50" width="137" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURATION: 0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIR-No-3Dk">
                                 <rect key="frame" x="50" y="100" width="195" height="41"/>
                                 <animations/>
@@ -297,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BIT-Title" width="328" height="166"/>
         <image name="exit" width="200" height="200"/>
         <image name="music_on" width="100" height="100"/>
         <image name="replay" width="200" height="200"/>

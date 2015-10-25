@@ -11,6 +11,8 @@
  
  a 'hard' version where you are also in a storm and the screen flashes black or white sometimes
  - to test, just blink while playing normal
+ 
+ 25/10/15 nope - no storms in space. but fire meteors would make more sence following the shelf and logo
  */
 
 #import "GameViewController.h"
@@ -18,7 +20,7 @@
 #import "AppDelegate.h"
 #import "TransitionManager.h"
 
-#import <GameKit/GameKit.h>
+//#import <GameKit/GameKit.h>
 
 
 @interface GameViewController ()
@@ -93,13 +95,13 @@
 }
 
 
--(void)reportGameCentreScore
-{
-    GKScore *reportScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"meteorHighscores"];
-    reportScore.value = self.meteorHighscore;
-    
-    [GKScore reportScores:[NSArray arrayWithObjects:reportScore, nil] withCompletionHandler:nil];
-}
+//-(void)reportGameCentreScore
+//{
+//    GKScore *reportScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"meteorHighscores"];
+//    reportScore.value = self.meteorHighscore;
+//    
+//    [GKScore reportScores:[NSArray arrayWithObjects:reportScore, nil] withCompletionHandler:nil];
+//}
 -(void)endGame
 {
     self.gameOver = YES;
@@ -126,7 +128,7 @@
         [[NSUserDefaults standardUserDefaults] setInteger:self.timeHighscore forKey:@"timeHighscore"];
         
         //send new high scores only
-        [self reportGameCentreScore];
+//        [self reportGameCentreScore];
     }
 }
 -(void)startGame
@@ -135,7 +137,7 @@
     self.endGameView.hidden = YES;
     
     //reset game variabes
-    self.gravityConstant = 9;
+    self.gravityConstant = 15;
     self.timeScore = 0;
     self.meteorScore = 0;
     self.lblTimeScore.text = [NSString stringWithFormat:@"DURATION: %i", self.timeScore];
@@ -206,7 +208,7 @@
             
             //start timers
             self.trmCountTimeScore = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countTimeScore) userInfo:nil repeats:YES];
-            self.trmCreateMeteors = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(createRandomMeteor) userInfo:nil repeats:YES];
+            self.trmCreateMeteors = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(createRandomMeteor) userInfo:nil repeats:YES];
         }];
     }];
     
@@ -222,6 +224,15 @@
     }];
 }
 
+-(void)validateScreenEdges {
+    
+    if (self.shipObject.center.x < 0)
+        self.shipObject.center = CGPointMake(0, self.shipObject.center.y);
+    if (self.shipObject.center.x > self.view.frame.size.width)
+        self.shipObject.center = CGPointMake(self.view.frame.size.width, self.shipObject.center.y);
+}
+
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (self.gameOver == NO)
@@ -230,6 +241,8 @@
         CGPoint touchPoint = [myTouch locationInView:self.view];
         
         self.shipObject.center = CGPointMake(touchPoint.x, self.shipObject.center.y);
+        
+        [self validateScreenEdges];
     }
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -246,6 +259,8 @@
         else self.shipsDirectionOfMovement = @"up";
         
         self.shipObject.center = CGPointMake(touchPoint.x, self.shipObject.center.y);
+        
+        [self validateScreenEdges];
     }
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -469,15 +484,15 @@
 {
     [self darkenBackground];
     
-    int size = arc4random() % 3;
+    int size = arc4random() % 4;
     if (size == 0)
     {
-        size = 20;
+        size = 30;
         [self countMeteorScoreWithNewScore:1];
     }
     else
     {
-        size = 60;
+        size = 70;
         [self countMeteorScoreWithNewScore:3];
     }
     
@@ -490,9 +505,9 @@
 }
 -(void)countTimeScore
 {
-    self.gravityConstant += 0.3;
+    self.gravityConstant += 0.2;
     
-    self.shipObject.currentSpeedY += 0.05;
+    self.shipObject.currentSpeedY += 0.04;
     float newY = self.shipObject.center.y-(self.speedFactor*self.shipObject.currentSpeedY);
     self.shipObject.center = CGPointMake(self.shipObject.center.x, newY);
     
@@ -522,8 +537,8 @@
     float green = components[1];
     float blue = components[2];
     
-    green *= 0.994;
-    blue *= 0.998;
+    green *= 0.991;
+    blue *= 0.995;
     
     self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1];
 }

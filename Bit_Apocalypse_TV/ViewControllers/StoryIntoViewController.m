@@ -73,8 +73,9 @@
     self.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width+100, self.view.frame.size.height)];
     [self.view addSubview:self.backgroundView];
     
-    //create the rocket
-    self.rocketView = [[UIImageView alloc] initWithFrame:CGRectMake(320, self.view.frame.size.height-400, 80, 400)];
+    
+    //create the rocket (rocket is 400x80)
+    self.rocketView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, self.view.frame.size.height-400, 80, 400)];
     [self.rocketView setImage:[UIImage imageNamed:@"ship"]];
     [self.view addSubview:self.rocketView];
     
@@ -87,12 +88,12 @@
     
     //create the person
     //for a square face, use 40x75 ratio
-    self.personView = [[PersonView alloc] initWithFrame:CGRectMake(120, self.view.frame.size.height-75, 40, 75)];
+    self.personView = [[PersonView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/3*2, self.view.frame.size.height-75, 40, 75)];
     [self.view addSubview:self.personView];
     
     
     
-    self.trmCreateMeteors = [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(createMeteor) userInfo:nil repeats:YES];
+    self.trmCreateMeteors = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(createMeteor) userInfo:nil repeats:YES];
     
     
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self.personView selector:@selector(moveEyesUp)    userInfo:nil repeats:NO];
@@ -101,9 +102,9 @@
     
     [UIView animateWithDuration:2 delay:4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
-        self.personView.center = CGPointMake(self.personView.center.x-100, self.personView.center.y);
-        self.rocketView.center = CGPointMake(self.rocketView.center.x-100, self.rocketView.center.y);
-        self.backgroundView.center = CGPointMake(self.backgroundView.center.x-100, self.backgroundView.center.y);
+        self.personView.center = CGPointMake(self.personView.center.x-self.view.frame.size.width/3, self.personView.center.y);
+        self.rocketView.center = CGPointMake(self.rocketView.center.x-self.view.frame.size.width/3, self.rocketView.center.y);
+        self.backgroundView.center = CGPointMake(self.backgroundView.center.x-self.view.frame.size.width/3, self.backgroundView.center.y);
         
     } completion:^(BOOL finished) {
         
@@ -122,7 +123,6 @@
             [self.personView runToRocket:self.rocketView];
             
         } completion:^(BOOL finished) {
-            
             
             [NSTimer scheduledTimerWithTimeInterval:0.1 target:self.personView selector:@selector(hidePerson) userInfo:nil repeats:NO];
             
@@ -148,10 +148,11 @@
 
 -(void)createMeteor
 {
-    int rand = arc4random() % 440 - 10;
     int size = 20;
+    int rand = arc4random() % (int)(self.view.frame.size.width*1.5) - size/2;
     
-    UIImageView *meteor = [[UIImageView alloc] initWithFrame:CGRectMake(rand, -20, size, size)];
+    
+    UIImageView *meteor = [[UIImageView alloc] initWithFrame:CGRectMake(rand, -size, size, size)];
     [meteor setImage:[UIImage imageNamed:[NSString stringWithFormat:@"meteor%ia", (arc4random()) % 5 + 1]]];
     [self.backgroundView addSubview:meteor];
     
