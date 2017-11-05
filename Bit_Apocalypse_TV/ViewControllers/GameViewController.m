@@ -20,7 +20,7 @@
 #import "AppDelegate.h"
 #import "TransitionManager.h"
 
-//#import <GameKit/GameKit.h>
+#import <GameKit/GameKit.h>
 
 
 @interface GameViewController ()
@@ -95,13 +95,19 @@
 }
 
 
-//-(void)reportGameCentreScore
-//{
-//    GKScore *reportScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"meteorHighscores"];
-//    reportScore.value = self.meteorHighscore;
-//    
-//    [GKScore reportScores:[NSArray arrayWithObjects:reportScore, nil] withCompletionHandler:nil];
-//}
+-(void)reportGameCentreScore
+{
+    GKScore *reportScore = [[GKScore alloc] initWithLeaderboardIdentifier:@"grp.meteorHighscores"];
+    reportScore.value = self.meteorHighscore;
+    
+    [GKScore reportScores:[NSArray arrayWithObjects:reportScore, nil] withCompletionHandler:^(NSError * _Nullable error) {
+      
+        if (error) {
+            NSLog(@"Error submitting game center score");
+            NSLog(@"%@", error);
+        }
+    }];
+}
 -(void)endGame
 {
     self.gameOver = YES;
@@ -128,7 +134,7 @@
         [[NSUserDefaults standardUserDefaults] setInteger:self.timeHighscore forKey:@"timeHighscore"];
         
         //send new high scores only
-//        [self reportGameCentreScore];
+        [self reportGameCentreScore];
     }
 }
 -(void)startGame
@@ -224,15 +230,14 @@
     }];
 }
 
--(void)validateScreenEdges {
+-(void)validateScreenEdges
+{
     
     if (self.shipObject.center.x < 0)
         self.shipObject.center = CGPointMake(0, self.shipObject.center.y);
     if (self.shipObject.center.x > self.view.frame.size.width)
         self.shipObject.center = CGPointMake(self.view.frame.size.width, self.shipObject.center.y);
 }
-
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (self.gameOver == NO)
@@ -542,5 +547,14 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1];
 }
+
+-(void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event {
+    
+    if (presses.count > 0 && presses.allObjects.firstObject.type == UIPressTypeMenu)
+    {
+        [self exitGame:nil];
+    }
+}
+
 
 @end

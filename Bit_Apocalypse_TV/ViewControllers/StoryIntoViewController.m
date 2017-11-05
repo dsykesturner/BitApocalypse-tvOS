@@ -168,14 +168,27 @@
     }];
 }
 
-//-(IBAction)skip:(id)sender
-//{
-//    NSLog(@"tapped");
-//    
-//    if (self.trmCreateMeteors.isValid)
-//        [self.trmCreateMeteors invalidate];
-//    
-//    [app_delegate moveToGameScreen];
-//}
+-(IBAction)skip:(id)sender
+{
+    if (self.trmCreateMeteors.isValid)
+        [self.trmCreateMeteors invalidate];
+    
+    [app_delegate moveToGameScreen];
+}
+-(IBAction)exitGame:(id)sender
+{
+    if (self.trmCreateMeteors.isValid)
+        [self.trmCreateMeteors invalidate];
+    
+    [app_delegate moveToHomeScreen];
+}
+
+-(void)pressesBegan:(NSSet<UIPress *> *)presses withEvent:(UIPressesEvent *)event {
+    
+    if (presses.count > 0 && presses.allObjects.firstObject.type == UIPressTypeMenu)
+    {
+        [self exitGame:nil];
+    }
+}
 
 @end

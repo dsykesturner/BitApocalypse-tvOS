@@ -85,14 +85,36 @@
                                         <rect key="frame" x="796" y="58" width="328" height="166"/>
                                         <animations/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YzU-e1-7yu">
+                                        <rect key="frame" x="1720" y="960" width="125" height="70"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="eTM-8J-TDA"/>
+                                            <constraint firstAttribute="height" constant="70" id="vVf-bj-YDk"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <connections>
+                                            <action selector="openGameCentre:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="afI-2k-YFp"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecenter" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-wV-wCi">
+                                        <rect key="frame" x="1739" y="967" width="86" height="55"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="9Cx-Ox-qnE"/>
+                                            <constraint firstAttribute="width" constant="86" id="hGP-K7-B8J"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YzU-e1-7yu" secondAttribute="trailing" constant="75" id="0jb-GW-t4d"/>
                                     <constraint firstItem="Ovu-ac-bSw" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="0uC-Nc-AfE"/>
                                     <constraint firstItem="Ovu-ac-bSw" firstAttribute="top" secondItem="eIJ-pv-79Q" secondAttribute="top" constant="50" id="C5k-qr-VXX"/>
                                     <constraint firstItem="Oyh-nc-RsZ" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="HGV-fn-YaN"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="leading" secondItem="uoW-Fh-jsG" secondAttribute="leading" constant="10" id="VLT-zB-WYK"/>
+                                    <constraint firstItem="YzU-e1-7yu" firstAttribute="bottom" secondItem="uoW-Fh-jsG" secondAttribute="bottom" id="aLv-9Y-CtH"/>
                                     <constraint firstItem="uoW-Fh-jsG" firstAttribute="centerX" secondItem="eIJ-pv-79Q" secondAttribute="centerX" id="bsb-vv-KsH"/>
                                     <constraint firstItem="cTN-4J-P3B" firstAttribute="centerY" secondItem="eIJ-pv-79Q" secondAttribute="centerY" id="d8E-zy-oN5"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="top" secondItem="uoW-Fh-jsG" secondAttribute="top" constant="10" id="gYE-K3-dmt"/>
@@ -103,6 +125,8 @@
                                     <constraint firstAttribute="bottom" secondItem="T9k-0n-jqG" secondAttribute="bottom" id="rmH-eD-zA2"/>
                                     <constraint firstItem="rkC-jm-77H" firstAttribute="bottom" secondItem="uoW-Fh-jsG" secondAttribute="bottom" constant="-10" id="tGW-Uq-hDv"/>
                                     <constraint firstItem="yly-hV-Vo0" firstAttribute="centerX" secondItem="Ovu-ac-bSw" secondAttribute="centerX" id="uhb-8w-27i"/>
+                                    <constraint firstItem="iMb-wV-wCi" firstAttribute="centerY" secondItem="YzU-e1-7yu" secondAttribute="centerY" id="v0N-8b-A7f"/>
+                                    <constraint firstItem="iMb-wV-wCi" firstAttribute="centerX" secondItem="YzU-e1-7yu" secondAttribute="centerX" id="x1I-8f-7y0"/>
                                     <constraint firstItem="yly-hV-Vo0" firstAttribute="centerY" secondItem="Ovu-ac-bSw" secondAttribute="centerY" id="y2q-ag-bUX"/>
                                     <constraint firstAttribute="bottom" secondItem="uoW-Fh-jsG" secondAttribute="bottom" constant="50" id="ypu-Bk-RaG"/>
                                 </constraints>
@@ -310,6 +334,7 @@
     <resources>
         <image name="BIT-Title" width="328" height="166"/>
         <image name="exit" width="200" height="200"/>
+        <image name="gamecenter" width="300" height="200"/>
         <image name="music_on" width="100" height="100"/>
         <image name="replay" width="200" height="200"/>
         <image name="ship" width="40" height="200"/>
